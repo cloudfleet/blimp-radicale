@@ -41,6 +41,6 @@ full_environment = False
 [auth]
 type = LDAP
 ldap_url = ldap://musterroll:389/
-ldap_attribute = uid
+ldap_attribute = cn
 ldap_scope = OneLevel
 
