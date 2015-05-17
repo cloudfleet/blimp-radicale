@@ -43,4 +43,4 @@ type = LDAP
 ldap_url = ldap://musterroll:389/
 ldap_attribute = cn
 ldap_scope = OneLevel
-
+ldap_base = __USER_BASE_DN__
