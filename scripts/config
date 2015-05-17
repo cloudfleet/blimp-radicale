@@ -21,10 +21,7 @@ committer = Radicale <radicale@example.com>
 
 
 [rights]
-type = None
-custom_handler =
-file = ~/.config/radicale/rights
-
+type = Authenticated
 
 [storage]
 type = filesystem
