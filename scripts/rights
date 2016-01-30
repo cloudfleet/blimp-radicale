@@ -1,0 +1,19 @@
+# Allow caldavzap, carddavmate and infcloud to work
+[infcloud]
+user: .*
+collection: /
+permission: r
+
+# This means all users may read and write any collection starting with public.
+# We do so by just not testing against the user string.
+[public]
+user: .*
+collection: ^public(/.+)?$
+permission: rw
+
+# Give write access to owners
+[owner-write]
+user: .+
+# collection: ^%(login)s/.+$    # DOES NOT WORK
+collection: ^%(login)s(/.+)?$
+permission: rw

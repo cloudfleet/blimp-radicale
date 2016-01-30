@@ -21,7 +21,8 @@ committer = Radicale <radicale@example.com>
 
 
 [rights]
-type = Authenticated
+file = /etc/radicale/rights
+type = from_file
 
 [storage]
 type = filesystem
@@ -32,12 +33,14 @@ config = /etc/radicale/logging
 debug = True
 full_environment = False
 
-#[headers]
-#Access-Control-Allow-Origin = *
+[headers]
+Access-Control-Allow-Origin = *
+Access-Control-Allow-Methods = GET, POST, OPTIONS, PROPFIND, PROPPATCH, REPORT, PUT, MOVE, DELETE, LOCK, UNLOCK
+Access-Control-Allow-Headers = User-Agent, Authorization, Content-type, Depth, If-match, If-None-Match, Lock-Token, Timeout, Destination, Overwrite, X-client, X-Requested-With
+Access-Control-Expose-Headers = Etag
 
 [auth]
 type = LDAP
 ldap_url = ldap://musterroll:389/
 ldap_attribute = cn
 ldap_scope = OneLevel
-
